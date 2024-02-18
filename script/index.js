@@ -7,6 +7,7 @@ const scrollBtn = document.getElementById('scroll-Btn').addEventListener('click'
 
 // click button and change background color
 let count = 0;
+let clickBtn = 0;
 let newPrice = 550;
 const selectedBtn = document.querySelectorAll('.seat-btn')
 for(let btn of selectedBtn){
@@ -17,6 +18,7 @@ for(let btn of selectedBtn){
         btn.textContent = btn.innerText;
 
 
+        
         count++;
         // seats 0 
         const setCount = document.getElementById('set-count');
@@ -34,8 +36,6 @@ for(let btn of selectedBtn){
         const setBtn = btn.innerText
         const p = document.createElement('p');
         p.innerText = setBtn+ ' ' + 'Economoy'+' ' + 550;
-        p.style.display = 'flex'
-        p.style.gap = '24px';
         economoyPart.appendChild(p);
 
 
@@ -53,9 +53,41 @@ for(let btn of selectedBtn){
         const convertTotalGrand = parseInt(grandTotal.innerText);
         grandTotal.innerText = convertTotalGrand + newPrice;
 
-        console.log(typeof price);
+        // console.log(typeof price);
 
         
+        // input and next button karsaji
+        const inputNumber = document.getElementById('input-number');
+        const nextBtn = document.getElementById('next-btn');
+
+        inputNumber.addEventListener('input', function(){
+            if (inputNumber.value.trim() !== 'number') {
+                
+                nextBtn.removeAttribute('disabled');
+            } else {
+                
+                nextBtn.setAttribute('disabled', 'true');
+            }
+        })
+
+
+
         
+
+
+
     })
 }
+
+
+function hideElementById(elementId){
+    const element = document.getElementById(elementId)
+    element.classList.add('hidden')
+}
+
+function showElementById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('hidden')
+    
+}
+ 

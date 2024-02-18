@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"> 
     <style>
         .font-rw{
             font-family: "Raleway", sans-serif;
@@ -20,12 +21,12 @@
     </style>
 
 </head>
-<body>
+<body  id="body" class="">
     <!-- header section -->
-    <header class="w-[1440px] mx-auto font-rw mt-16">
+    <header class="w-[1270px] mx-auto font-rw mt-16 ">
         <div>
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
+            <div class="navbar bg-base-100 ">
+                <div class="">
                   <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -196,14 +197,14 @@
                                 </div>
                             </div>
                     <!-- **********set********* -->
-                            <div class=" ">
+                            <div class=" ">  
                                 <div class="flex  items-center gap-5 mt-5">
                                     <p class="">A</p>
                                     <div class="ml-12 flex gap-6">
-                                        <button id="A1" class=" seat-btn btn w-24">A2</button>
-                                        <button id="A2" class=" seat-btn btn w-24 ">A1</button>
-                                        <button id="A3" class=" seat-btn btn w-24 ml-8">A3</button>
-                                        <button id="A4" class=" seat-btn btn w-24">A4</button>
+                                        <button  id="A1" class=" seat-btn btn w-24">A2</button>
+                                        <button  id="A2" class=" seat-btn btn w-24 ">A1</button>
+                                        <button  id="A3" class=" seat-btn btn w-24 ml-8">A3</button>
+                                        <button  id="A4" class=" seat-btn btn w-24">A4</button>
                                     </div>
                                 </div>
                                 <div class="flex  items-center gap-5 mt-5">
@@ -253,17 +254,13 @@
                                     <div class="border-t border-dashed mt-4">
                                         
                                     </div>
+
+
+                                <!-- ******************************** -->
                                     <div id="economoy-part" class="">
-                                        <!-- <div id="economoy-part" class="flex justify-between">
-                                            <p class="text-[15px]">C2</p>
-                                            <p>Economoy</p>
-                                            <p>550</p>
-                                        </div>
-                                        <div class="flex justify-between mt-5">
-                                            <p class="text-[15px]">C2</p>
-                                            <p>Economoy</p>
-                                            <p>550</p>
-                                        </div> -->
+                                        
+
+
                                     </div>
                                     <hr class="mt-5">
                                     <div>
@@ -294,14 +291,33 @@
                                     </div>
                                     <div class="mt-5">
                                         <p class="mb-3">Phone Number* </p>
-                                        <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full " />
+                                        <input id="input-number" type="text" placeholder="Enter your phone number" class="input input-bordered w-full " />
                                     </div>
                                     <div class="mt-5">
                                         <p class="mb-3">Email ID </p>
                                         <input type="text" placeholder="Enter your email id" class="input input-bordered w-full " />
                                     </div>
                         <!--*************** button************ -->
-                                    <button class="btn w-full mt-5 bg-[#1DD100] text-white font-bold text-xl rounded-xl">Next</button>
+                                    <div>
+                                        <div class="mt-5">
+                                            <button class="btn w-full bg-[#1DD100] text-white text-xl font-bold"  onclick="my_modal_4.showModal()">Next</button>
+                                            <dialog id="my_modal_4" class="modal">
+                                            <div class="modal-box w-[700px] max-w-5xl text-center">
+                                                <img class="mx-auto" src="images/success.png" alt="">
+                                                <h3 class="font-bold text-[#27AE60] text-3xl">Success</h3>
+                                                <p class="py-4 w-[500px] mx-auto font-bold text-[#4A4A4A]">Thank you for Booking Our Bus Seats. 
+                                                    <br>We are working hard to find the best service and deals for you. 
+                                                    <br> <span class="text-[#969595]">Shortly you will find a confirmation in your email.</span></p>
+                                                <button class="btn w-[250px] bg-[#27AE60] rounded-full text-white font-bold text-lg">Continue</button>
+                                            <div class="modal-action">
+                                            <form method="dialog">
+                                                <!-- if there is a button, it will close the modal -->
+                                                <button class="btn">Close</button>
+                                            </form>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div class="flex justify-between mt-4">   
                                         <p class="underline">Terms and Conditions</p>
                                         <p class="underline">Cancellation Policy</p>
@@ -315,17 +331,37 @@
      
             </section>
         </section>
-        <section class="shadow-2xl bg-white mt-20 w-[718px] h-[480px] mx-auto flex flex-col justify-center items-center hidden ">
-            <div class="space-y-4">
-                <img class="mx-auto " src="images/success.png" alt="">
-                <div class="text-center space-y-4">
-                    <h2 class="text-lg text-[#27AE60]  font-bold">SUCCESS</h2>
-                    <p class="w-[500px] mx-auto font-bold">Thank you for Booking Our Bus Seats. 
-                        We are working hard to find the best service and deals for you. 
-                       <br> <span class="text-[#4A4A4A] font-normal">Shortly you will find a confirmation in your email.</span></p>
-                    <button class="btn w-[250px] bg-[#27AE60] rounded-full text-white font-bold">Continue</button>
+        <section  id="success-part">
+            <section  class="shadow-2xl bg-white mt-20 w-[718px] h-[480px] mx-auto flex flex-col justify-center items-center hidden">
+                <div class="space-y-4">
+                    <img class="mx-auto " src="images/success.png" alt="">
+                    <div class="text-center space-y-4">
+                        <h2 class="text-lg text-[#27AE60]  font-bold">SUCCESS</h2>
+                        <p class="w-[500px] mx-auto font-bold">Thank you for Booking Our Bus Seats. 
+                            We are working hard to find the best service and deals for you. 
+                           <br> <span class="text-[#4A4A4A] font-normal">Shortly you will find a confirmation in your email.</span></p>
+                        
+                    </div>
                 </div>
-            </div>
+            </section>
+        </section>
+        <section>
+            <!-- You can open the modal using ID.showModal() method -->
+                <div>
+                    <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
+                    <dialog id="my_modal_4" class="modal">
+                    <div class="modal-box w-11/12 max-w-5xl">
+                    <h3 class="font-bold text-lg">Hello!</h3>
+                    <p class="py-4">Click the button below to close</p>
+                    <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                    </div>
+                    </div>
+                </div>
+               
         </section>
         
     </main>
