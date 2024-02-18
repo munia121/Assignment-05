@@ -7,6 +7,7 @@ const scrollBtn = document.getElementById('scroll-Btn').addEventListener('click'
 
 // click button and change background color
 let count = 0;
+let newPrice = 550;
 const selectedBtn = document.querySelectorAll('.seat-btn')
 for(let btn of selectedBtn){
     btn.addEventListener('click', function(e){
@@ -26,7 +27,7 @@ for(let btn of selectedBtn){
         const convertSeatsLeft = parseInt(seatsLeft) -1 ;
         document.getElementById('seats-left').innerText = convertSeatsLeft;
 
-        
+
 
         // economoy-part
         const economoyPart = document.getElementById('economoy-part');
@@ -39,8 +40,22 @@ for(let btn of selectedBtn){
 
 
 
+        // total price 
+        const totalPrice = document.getElementById('total-price');
+        const convertTotalPrice = parseInt(totalPrice.innerText);
+        totalPrice.innerText = convertTotalPrice + newPrice;
+
+        console.log(typeof price);
 
         
-       
+        //grand Total
+        const grandTotal = document.getElementById('grand-total');
+        const convertTotalGrand = parseInt(grandTotal.innerText);
+        grandTotal.innerText = convertTotalGrand + newPrice;
+
+        console.log(typeof price);
+
+        
+        
     })
 }
