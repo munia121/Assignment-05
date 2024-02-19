@@ -17,9 +17,28 @@ for(let btn of selectedBtn){
         btn.disabled = true;
         btn.textContent = btn.innerText;
 
+        if(clickBtn < 4){
+            const disableBtn = btn.getAttribute('disabled');
+            if(!disableBtn) {
+                const ticket = btn.innerText;
+                console.log(ticket);
+                btn.setAttribute('disabled', true);
+                clickBtn++;
+            }
+        }else{
+            alert("Can't select more than 4 tickets")
+        }
 
-        
+
+
+       
+        // console.log(btn)
+
+
+
+
         count++;
+        
         // seats 0 
         const setCount = document.getElementById('set-count');
         setCount.innerText = count;
