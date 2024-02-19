@@ -71,7 +71,7 @@
             </div>
             <div class="lg:flex justify-center gap-5 mt-11 p-5">
                 <div class="flex bg-[#FFBF0F] lg:w-[570px] h-[220px] justify-around items-center rounded-[40px]">
-                    <div class=" ">
+                    <div class="p-4 ">
                         <h1 class="text-4xl font-bold">15% OFF</h1>
                         <h5 class="font-bold">on your next purchase</h5>
                         <p>use by January 2024</p>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="flex bg-[#F78C9C] lg:w-[570px] h-[220px] justify-around items-center rounded-[40px] lg:mt-0 mt-5">
-                    <div class=" ">
+                    <div class=" p-4">
                         <h1 class="text-4xl font-bold">20% OFF</h1>
                         <h5 class="font-bold">on your next purchase</h5>
                         <p>use by January 2024</p>
@@ -172,15 +172,16 @@
                     </section>
                 </div>
 <!-- *****************selected set part **************-->
-                <section class="lg:w-[1170px] mx-auto mt-8 bg-white rounded-lg p-10 ">
+            <section class="">
+                <section class="lg:w-[1170px]  mx-auto mt-8 bg-white rounded-lg  lg:p-10 ">
                     <!-- bus set part -->
                     <div class="grid lg:grid-cols-2 gap-20">
-                        <div class=" lg:w-[570px]">
-                            <h1 class="text-2xl font-semibold">Select Your Seat</h1>
+                        <div class=" lg:w-[585px] ">
+                            <h1 class="text-2xl font-semibold p-4 ">Select Your Seat</h1>
                             <div class="border-t border-dashed mt-4 lg:block hidden">
                                         
                             </div>
-                            <div class="flex justify-between  mt-4">
+                            <div class="flex justify-between  p-4 mt-4">
                                 <div class="flex">
                                 <img src="images/seat-gray.png" alt="">
                                     <p>Available</p>
@@ -194,7 +195,7 @@
                                         
                             </div>
                             <div class="">
-                                <div class="lg:ml-[450px] bg-gray-300 border w-18 p-2 mt-5 h-12 rounded-lg">
+                                <div class="lg:ml-[470px] bg-gray-300 border w-18 p-2 mt-5 h-12 rounded-lg">
                                     <img class=" mx-auto" src="images/tabler-icon.png" alt="">
                                 </div>
                             </div>
@@ -276,15 +277,15 @@
                             </div>
                         </div>
                         <!-- form part -->
-                        <div class="lg:ml-20">
+                        <div class="lg:ml-20 ">
                             <div class="">
-                                <h1 class="text-2xl font-semibold">Select Your Seat</h1>
+                                <h1 class="text-2xl font-semibold p-4">Select Your Seat</h1>
                                     <div class="border-t border-dashed mt-4">
                                     
                                     </div>
                             </div>
-                            <div>
-                                <div class="w-[400px] mt-5 bg-[#F7F8F8] p-10 rounded-lg">
+                            <div class="p-4 lg:p-0">
+                                <div class="lg:w-[400px]  mt-5 bg-[#F7F8F8] p-10 rounded-lg">
                                     <div class="flex justify-between">
                                         <p class="text-[15px]">Set <span id="set-count" class="bg-[#1DD100] px-2 text-[10px] rounded-lg text-white">0</span></p>
                                         <p>Class</p>
@@ -323,7 +324,7 @@
                     <!-- *************input ********** -->
 
 
-                                <div class="mt-4 w-[400px]">
+                                <div class="mt-4 lg:w-[400px] p-4 lg:p-0">
                                     <div class="">
                                         <p class="mb-3">Passenger Name* </p>
                                         <input type="text" placeholder="Type here" class="input input-bordered w-full " />
@@ -366,35 +367,38 @@
                             
                         </div>
                     </div>
-                </section>  
+                </section> 
+               </section> 
      
             </section>
         </section>
     </main>
     <!-- footer section -->
-    <footer class="  p-10 bg-black text-neutral-content">
-        <div class="flex justify-around  w-full">
-            <aside>
-                <p class="text-3xl">P-Ticket</p>
-                <p>ACME Industries Ltd.<br>Providing reliable tech since 1992</p>
-              </aside> 
-              <nav>
-                <h6 class="text-xl">Download our app</h6> 
-                <div class="">
-                  <img src="images/Group 104.svg" alt="">
-      
-                </div>
-              </nav>
-        </div>
-        <hr class="mt-10">
-        <div class="mt-10 flex justify-around">
-            <p>@all rights reserved, P-Ticket services limited.2024</p>
-            <div class="flex gap-10">
-                <p>Terms & condition</p>
-                <p>Return & refund policy</p>
-                <p>Privacy policy</p>
+    <footer class="  bg-black text-neutral-content">
+        <div>
+            <div class=" flex justify-around  p-10  w-full">
+                <aside>
+                    <p class="text-3xl">P-Ticket</p>
+                    <p>ACME Industries Ltd.<br>Providing reliable tech since 1992</p>
+                  </aside> 
+                  <nav>
+                    <h6 class="text-xl">Download our app</h6> 
+                    <div class="">
+                      <img src="images/Group 104.svg" alt="">
+          
+                    </div>
+                  </nav>
             </div>
-          </div>
+            <hr class="mt-10">
+            <div class="mt-10 lg:flex justify-around p-4">
+                <p>@all rights reserved, P-Ticket services limited.2024</p>
+                <div class="lg:flex text-center gap-10">
+                    <p>Terms & condition</p>
+                    <p>Return & refund policy</p>
+                    <p>Privacy policy</p>
+                </div>
+            </div>
+        </div>
       </footer>
       
     <script src="script/index.js"></script>
