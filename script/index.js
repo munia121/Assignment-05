@@ -45,15 +45,12 @@ for(let btn of selectedBtn){
         const convertTotalPrice = parseInt(totalPrice.innerText);
         totalPrice.innerText = convertTotalPrice + newPrice;
 
-        console.log(typeof price);
 
         
         //grand Total
         const grandTotal = document.getElementById('grand-total');
         const convertTotalGrand = parseInt(grandTotal.innerText);
         grandTotal.innerText = convertTotalGrand + newPrice;
-
-        // console.log(typeof price);
 
         
         // input and next button karsaji
@@ -73,11 +70,53 @@ for(let btn of selectedBtn){
 
 
         
-
-
+        
 
     })
 }
+
+const couponButton = document.getElementById('coupon-btn');
+
+        couponButton.addEventListener('click',function(){
+            const inputCoupon = document.getElementById('coupon-input').value;
+
+            if(inputCoupon ==="NEW15"|| inputCoupon === "Couple 20"){
+                document.getElementById('coupon-input').classList.add('hidden')
+                couponButton.classList.add('hidden')
+                if(inputCoupon === "NEW15"){
+                    const grandTotalS = document.getElementById('grand-total').innerText;
+                    const converted = parseInt(grandTotalS);
+                    // console.log(converted)
+                    const discount = converted * 15 / 100;
+                    const a =(converted) - discount;
+                    document.getElementById('grand-total').innerText = a;
+                    console.log(a)
+                    
+                }
+                else if(inputCoupon === "Couple 20"){
+                    const grandTotalS = document.getElementById('grand-total').innerText;
+                    const converted = parseInt(grandTotalS);
+                    // console.log(converted)
+                    const discount = converted * 20 / 100;
+                    const a =(converted) - discount;
+                    document.getElementById('grand-total').innerText = a;
+                    console.log(a)
+
+                }
+            }
+            else{
+                alert('Invalid coupon')
+            }
+        })
+
+
+
+
+
+
+
+
+
 
 
 function hideElementById(elementId){
