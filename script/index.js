@@ -12,31 +12,18 @@ let newPrice = 550;
 const selectedBtn = document.querySelectorAll('.seat-btn')
 for(let btn of selectedBtn){
     btn.addEventListener('click', function(e){
+
+        if(count >= 4){
+            alert("Can't select more than 4 tickets")
+            return
+        }
         e.target.style.backgroundColor = '#1DD100';
         e.target.style.color = 'white'
         btn.disabled = true;
         btn.textContent = btn.innerText;
 
-        if(clickBtn < 4){
-            const disableBtn = btn.getAttribute('disabled');
-            if(!disableBtn) {
-                const ticket = btn.innerText;
-                console.log(ticket);
-                btn.setAttribute('disabled', true);
-                clickBtn++;
-            }
-        }else{
-            alert("Can't select more than 4 tickets")
-        }
-
-
-
-       
-        // console.log(btn)
-
-
-
-
+        
+             
         count++;
         
         // seats 0 
@@ -50,12 +37,26 @@ for(let btn of selectedBtn){
 
 
 
-        // economoy-part
-        const economoyPart = document.getElementById('economoy-part');
+        // economy-part
+        const economyPart = document.getElementById('economoy-part');
+        const div = document.createElement('div');
+        div.classList.add('flex')
+        div.classList.add('gap-[100px]')
         const setBtn = btn.innerText
+        console.log(setBtn)
         const p = document.createElement('p');
-        p.innerText = setBtn+ ' ' + 'Economoy'+' ' + 550;
-        economoyPart.appendChild(p);
+        p.innerText = setBtn
+        const p2 = document.createElement('p');
+        p2.innerText = 'Economy'
+        const p3 = document.createElement('p');
+        p3.innerText = 550
+        div.appendChild(p);
+        div.appendChild(p2);
+        div.appendChild(p3);
+        economyPart.appendChild(div);
+
+
+
 
 
 
@@ -109,7 +110,9 @@ const couponButton = document.getElementById('coupon-btn');
                     const discount = converted * 15 / 100;
                     const a =(converted) - discount;
                     document.getElementById('grand-total').innerText = a;
-                    console.log(a)
+                    document.getElementById('coupon-input').value = '';
+                   
+                    // console.log(a)
                     
                 }
                 else if(inputCoupon === "Couple 20"){
@@ -119,33 +122,24 @@ const couponButton = document.getElementById('coupon-btn');
                     const discount = converted * 20 / 100;
                     const a =(converted) - discount;
                     document.getElementById('grand-total').innerText = a;
-                    console.log(a)
+                    // console.log(a)
+                    document.getElementById('coupon-input').value = '';
 
                 }
+                
             }
             else{
                 alert('Invalid coupon')
             }
+            
+
+
+
+
         })
 
+        
 
 
 
 
-
-
-
-
-
-
-function hideElementById(elementId){
-    const element = document.getElementById(elementId)
-    element.classList.add('hidden')
-}
-
-function showElementById(elementId){
-    const element = document.getElementById(elementId);
-    element.classList.remove('hidden')
-    
-}
- 
